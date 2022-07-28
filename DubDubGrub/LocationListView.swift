@@ -9,7 +9,15 @@ import SwiftUI
 
 struct LocationListView: View {
     var body: some View {
-        Text("List View")
+        NavigationView{
+            
+            List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+                LocationListViewCell()
+                    .navigationTitle("Grub Spots")
+            }
+            .listStyle(.plain)
+            
+        }
     }
 }
 
