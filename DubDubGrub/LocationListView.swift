@@ -11,9 +11,10 @@ struct LocationListView: View {
     var body: some View {
         NavigationView{
             
-            List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-                LocationListViewCell()
-                    .navigationTitle("Grub Spots")
+            List(0..<10) { item in
+                NavigationLink(destination: LocationDetailView()) { LocationListViewCell()
+                }
+                .navigationTitle("Grub Spots")
             }
             .listStyle(.plain)
             
