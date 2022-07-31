@@ -10,7 +10,6 @@ import SwiftUI
 struct LocationListView: View {
     var body: some View {
         NavigationView{
-            
             List(0..<10) { item in
                 NavigationLink(destination: LocationDetailView()) { LocationListViewCell()
                 }
